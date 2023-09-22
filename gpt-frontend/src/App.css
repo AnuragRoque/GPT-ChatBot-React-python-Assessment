@@ -1,38 +1,70 @@
-.App {
+/* App container */
+.app-container {
+  display: flex;
+  height: 100vh;
+  background-color: #f0f0f0;
+  overflow: hidden;
+}
+
+/* Left container (About Chatbot) */
+.left-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.about-chatbot {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.about-chatbot h1 {
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.about-chatbot p {
+  font-size: 16px;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.about-chatbot input {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  width: 100%;
+  max-width: 300px;
+}
+
+.about-chatbot button {
+  background-color: #16a085;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.about-chatbot button:hover {
+  background-color: #1abc9c;
+  transition: background-color 0.3s;
+}
+
+/* Right container (Chatbot) */
+.right-container {
+  flex: 3;
+  background-color: #f0f0f0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* Adjust styles for the Chatbot component within Chatbot.js */
