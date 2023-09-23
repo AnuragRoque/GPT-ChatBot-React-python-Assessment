@@ -52,7 +52,7 @@ npm start
 ```
 
 
-[@Anuragroque](https://github.com/AnuragRoque/)https://github.com/AnuragRoque/
+[@Anuragroque](https://github.com/AnuragRoque/)
 
 
 
