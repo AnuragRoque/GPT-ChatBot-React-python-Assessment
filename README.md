@@ -43,8 +43,16 @@ Before you begin, ensure you have the following prerequisites installed:
 
 ### Project RUN
 ```shell
-   cd gpt-backend2
-   npm start
+cd gpt-backend2
+python app.py
+```
+```shell
+cd gpt-frontend
+npm start
+```
+
+
+[@Anuragroque](https://github.com/AnuragRoque/)https://github.com/AnuragRoque/
 
 
 
