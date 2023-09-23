@@ -9,6 +9,11 @@
     display: flex;
     flex-direction: column;
     height: 2000px;
+    font-size: small;
+  }
+  .formleft{
+    margin-left: 20px;
+
   }
   
   /* Chatbot header */
@@ -56,12 +61,36 @@
     margin: 5px;
     max-width: 70%;
   }
-  
-  .user-bubble {
-    background-color: #007bff;
-    color: #fff;
-    align-self: flex-end;
+  .message-label{
+    color: #000;
   }
+  
+ /* CSS for user chat bubble */
+.user-bubble {
+  text-align: right;
+  background-color: #1abc9c;
+  color: white;
+  border-radius: 20px 20px 20px 20px; /* Adjust border-radius as needed */
+  margin: 5px;
+  padding: 10px;
+  margin-left: 50px;
+  /* max-width: 70%;  */
+  /* Adjust as needed */
+  align-self: flex-end;
+}
+
+/* CSS for AI chat bubble */
+.assistant-bubble {
+  text-align: left;
+  background-color: #3498db;
+  color: white;
+  border-radius: 20px 20px 20px 20px; /* Adjust border-radius as needed */
+  margin: 5px;
+  padding: 10px;
+  max-width: 70%; /* Adjust as needed */
+  align-self: flex-start;
+}
+
   
   /* Chat input container */
   .chat-input-container {

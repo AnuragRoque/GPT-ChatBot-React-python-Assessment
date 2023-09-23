@@ -55,17 +55,24 @@ function Chatbot(props) {
         </div>
       </div>
       <div className="chat-content">
-        {conversation.map((message, index) => (
-          <div
-            key={index}
-            className={`chat-bubble ${
-              message.role === "user" ? "user-bubble" : "assistant-bubble"
-            }`}
-          >
-            {message.content}
-          </div>
-        ))}
-      </div>
+  {conversation.map((message, index) => (
+    <div
+      key={index}
+      className={`chat-bubble ${
+        message.role === "user" ? "user-bubble" : "assistant-bubble"
+      }`}
+    >
+      {message.role === "user" && (
+        <div className="message-label">User</div>
+      )}
+      {message.role === "assistant" && (
+        <div className="message-label">AI</div>
+      )}
+      {message.content}
+    </div>
+  ))}
+</div>
+
       <form onSubmit={handleSubmit} className="chat-input-container">
         <input
           type="text"
