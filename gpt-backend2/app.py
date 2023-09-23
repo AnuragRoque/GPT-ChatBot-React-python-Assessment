@@ -8,6 +8,8 @@ CORS(app)  #CORS for all routes
 
 openai.api_key = "Enter your api key"
 
+# Set your OpenAI API key
+openai.api_key = os.environ['OPENAI_API_KEY']
 
 def chat_with_gpt3(user_input):
     messages = [{"role": "user", "content": user_input}]
