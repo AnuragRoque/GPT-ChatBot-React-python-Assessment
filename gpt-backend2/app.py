@@ -7,7 +7,7 @@ app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
 # Set your OpenAI API key
-openai.api_key = os.environ['OPENAI_API_KEY']
+openai.api_key = "Enter your key"
 
 def chat_with_gpt3(user_input):
     messages = [{"role": "user", "content": user_input}]
