@@ -1,4 +1,4 @@
-/* App container */
+
 .app-container {
   display: flex;
   height: 100vh;
@@ -6,7 +6,6 @@
   overflow: hidden;
 }
 
-/* Left container (About Chatbot) */
 .left-container {
   /* flex: 3 1; */
   display: flex;
@@ -64,9 +63,14 @@
   padding-top: 100;
 }
 .about-chatbot h1 {
+  transition: transform 0.4s ease-in-out;
   font-size: 24px;
   margin-bottom: 10px;
   color: #292929;
+}
+.about-chatbot h1:hover{
+  transform: scale(1.1);
+  transition: transform 0.4s ease-in-out;
 }
 
 .about-chatbot p {
@@ -91,6 +95,7 @@ i{
 
 .about-chatbot button {
   background-color: #16a085;
+  transition: transform 0.3s ease;
   color: #fff;
   border: none;
   border-radius: 5px;
@@ -101,7 +106,10 @@ i{
 
 .about-chatbot button:hover {
   background-color: #1abc9c;
-  transition: background-color 0.3s;
+  /* transition: background-color 0.3s; */
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+  box-shadow: #eb4e4e;
 }
 
 .left-form {
@@ -128,22 +136,25 @@ i{
 
 .left-form button {
   background-color: #16a085;
+  /* transform: scale(1.1); */
+  transition: transform 0.3s ease;
   color: #fff;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
+  margin-top: 12px;
   font-size: 16px;
   cursor: pointer;
 }
 
 .left-form button:hover {
   background-color: #1abc9c;
-  transition: background-color 0.3s;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
 }
 
 /* Right container (Chatbot) */
 .right-container {
-  /* ... other CSS properties ... */
   left: 600px;
   width: 400px;
   height: 800px;
@@ -157,21 +168,11 @@ i{
   justify-content: center;
   align-items: center;
   overflow: hidden;
-  z-index: 999; /* Use a high z-index value */
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transitions for transform and box-shadow */
+  z-index: 999;  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .right-container.opened {
-  transform: translateX(-300px); /* Adjust the transform property for the opened state */
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); /* Adjust the box shadow for the opened state */
+  transform: translateX(-300px); 
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); 
 }
 
-/* This CSS will make the right-container cover the right half of the screen when the "Start Chatbot" button is pressed, overlapping the left-form. Adjust the styles further as needed. */
-
-
-
-
-
-
-
-/* Adjust styles for the Chatbot component within Chatbot.js */

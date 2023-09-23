@@ -5,7 +5,7 @@
 /.pnp
 .pnp.js
 gpt-backend-env/
-
+env/
 # testing
 /coverage
 
