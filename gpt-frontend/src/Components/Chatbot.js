@@ -2,7 +2,8 @@ import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 import "./Chatbot.css"; // Import the CSS for styling
 
-const API_BASE_URL = "http://localhost:5000";
+// const API_BASE_URL = "http://localhost:5000";
+ const API_BASE_URL = "http://10.1.0.4:5000";
 
 function Chatbot(props) {
   const [userInput, setUserInput] = useState("");
