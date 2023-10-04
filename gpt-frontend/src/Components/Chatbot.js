@@ -3,7 +3,8 @@ import axios from "axios";
 import "./Chatbot.css"; // Import the CSS for styling
 
 // const API_BASE_URL = "http://localhost:5000";
- const API_BASE_URL = "http://10.1.0.4:5000";
+//  const API_BASE_URL = "http://10.1.0.4:5000";
+const API_BASE_URL = "https://b396a67d.server-gpt-chatbot-react-python.pages.dev";
 
 function Chatbot(props) {
   const [userInput, setUserInput] = useState("");
