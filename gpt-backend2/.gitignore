@@ -11,6 +11,7 @@ env/
 
 # production
 /build
+gpt-backend2/
 
 # misc
 .DS_Store
