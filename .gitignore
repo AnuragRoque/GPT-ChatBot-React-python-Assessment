@@ -42,7 +42,7 @@ build/Release
 node_modules/
 jspm_packages/
 gpt-backend-env
-gpt-backend2/
+.gpt-backend2
 
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
