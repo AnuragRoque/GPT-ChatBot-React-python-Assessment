@@ -3,7 +3,7 @@
 [New Video](https://drive.google.com/file/d/1RXLwIMifo52_t2EFui7RNtQDnyV5MbET/view?usp=sharing)
 
 [Demonstration Video](https://drive.google.com/file/d/1_dkxKi7VwoRcwdrrqsg4rd72L8Gqzu2T/view?usp=sharing)
-[Website](https://gpt-chatbot-react-python-assessment.pages.dev/)
+https://gpt-chatbot-react-python-assessment.pages.dev/
 
 
 <img src="https://github.com/AnuragRoque/GPT-ChatBot-React-python-Assessment/assets/41073466/6db84742-ec4f-44bf-9340-4054e0b99cec" alt="bot-thumbnail" width="300" height="200" />
