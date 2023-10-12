@@ -5,7 +5,8 @@
 [Demonstration Video](https://drive.google.com/file/d/1_dkxKi7VwoRcwdrrqsg4rd72L8Gqzu2T/view?usp=sharing)
 
 
-<img src="https://github.com/AnuragRoque/GPT-ChatBot-React-python-Assessment/assets/41073466/3dcfc1b4-5856-4c35-87e7-994530937684" alt="bot-thumbnail" width="300" height="200" />
+
+![image](https://github.com/AnuragRoque/GPT-Dynamic-ChatBot-React-python/assets/41073466/6db84742-ec4f-44bf-9340-4054e0b99cec)
 
 # Chatbot Application
 
