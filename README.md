@@ -1,4 +1,4 @@
-# GPT-ChatBot-React-python-Assessment
+# GPT-Dynamic-ChatBot-React-python
 
 [New Video](https://drive.google.com/file/d/1RXLwIMifo52_t2EFui7RNtQDnyV5MbET/view?usp=sharing)
 
