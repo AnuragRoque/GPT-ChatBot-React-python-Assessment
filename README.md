@@ -5,9 +5,11 @@
 [Demonstration Video](https://drive.google.com/file/d/1_dkxKi7VwoRcwdrrqsg4rd72L8Gqzu2T/view?usp=sharing)
 
 `<br>`
+
+##### 
 Visit: https://gpt-chatbot-react-python-assessment.pages.dev/
 
-<img src="https://github.com/AnuragRoque/GPT-ChatBot-React-python-Assessment/assets/41073466/6db84742-ec4f-44bf-9340-4054e0b99cec" alt="bot-thumbnail" width="300" height="200" />
+<img src="https://github.com/AnuragRoque/GPT-ChatBot-React-python-Assessment/assets/41073466/6db84742-ec4f-44bf-9340-4054e0b99cec" alt="bot-thumbnail" width="600" height="400" />
 
 # Chatbot Application
 
