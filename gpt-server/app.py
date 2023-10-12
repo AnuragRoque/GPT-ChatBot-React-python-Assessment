@@ -9,6 +9,39 @@ from langchain.vectorstores import Chroma
 from langchain.chains import VectorDBQA
 from langchain.chat_models import ChatOpenAI
 
+#for voice process
+import pyttsx3
+import speech_recognition as sr
+from bs4 import BeautifulSoup
+from selenium import webdriver
+engine = pyttsx3.init('sapi5')
+voices = engine.getProperty('voices')
+engine.setProperty('voice', voices[1].id)
+#for voice outout
+def speak(audio):
+    engine.say(audio)
+    engine.runAndWait()
+#for voice input
+def commandnow():
+    r = sr.Recognizer()
+    with sr.Microphone() as source:
+        # print("Listening...")
+        r.pause_threshold=1
+        audio = r.listen(source)
+    try:
+        #print("Recognizing...") 
+        query = r.recognize_google(audio, language='en-in') #Using google for voice recognition.h
+        print(f"{query}\n")
+
+    except Exception as e:
+        # print(e)
+        return "None"
+    return query    
+
+#end
+
+
+
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all routes
 
@@ -44,6 +77,7 @@ def chat_with_gpt3(user_input):
     )
 
     assistant_response = response["choices"][0]["message"]["content"]
+    speak(assistant_response)
     return assistant_response
 
 @app.route("/ask", methods=["POST"])
@@ -67,7 +101,7 @@ def ask():
     user_input_lower = user_input.lower()
     
     if user_input_lower == "exit":
-        return jsonify({"assistant_response": "Goodbye!"})
+        return jsonify({"assistant_response": speak("Goodbye!")})
     
     # Check if the user's input is in the question-answer pairs
     for pair in question_answer_pairs:
@@ -85,6 +119,7 @@ def ask():
     # If Langchain doesn't have an answer, use ChatGPT
     assistant_response = chat_with_gpt3(user_input)
     return jsonify({"assistant_response": assistant_response})
+
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000)

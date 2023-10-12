@@ -2,7 +2,9 @@
 .app-container {
   display: flex;
   height: 100vh;
-  background-color: #e0b388;
+  /* background: rgba(0, 0, 0, 0.5);
+   */
+   background: linear-gradient(to bottom, rgb(66, 189, 234), rgba(0, 0, 0, 0));
   overflow: hidden;
 }
 
@@ -55,8 +57,6 @@
 
 .about-chatbot {
   text-align: center;
-  padding-right: 300px;
-  padding-right: 0px;
   
   /* height: 200px;
   width: 200px; */
@@ -176,3 +176,18 @@ i{
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3); 
 }
 
+@media screen and (max-width: 768px) {
+  .app-container {
+    flex-direction: column; /* Adjust for smaller screens */
+  }
+  
+  .left-container, .left-form-container {
+    margin: 0; /* Add margin for spacing on smaller screens */
+  }
+ 
+
+  .right-container {
+    display: none; 
+    /* Hide the chatbot on smaller screens or use a different layout for mobile devices */
+  }
+}

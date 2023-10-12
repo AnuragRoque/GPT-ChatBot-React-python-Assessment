@@ -111,6 +111,7 @@ dist
 # Serverless directories
 .serverless/
 .gpt-backend2/
+bkup
 
 # FuseBox cache
 .fusebox/

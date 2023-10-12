@@ -20,7 +20,18 @@
     margin-left: 20px;
 
   }
-  
+
+  .mic-on{
+    align-content: center;
+    border: 0;
+  }
+  .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
 
   .chat-header {
     background-color: #007bff;
@@ -133,3 +144,23 @@
     background-color: #0056b3;
   }
   
+  /* Default styles for larger screens (e.g., desktops) */
+
+/* Media query for screens up to 768px wide (typical mobile devices) */
+@media screen and (max-width: 768px) {
+  .chat-container {
+    width: 90%; /* Adjust for smaller screens */
+    margin: 0; /* Remove margin to maximize screen space */
+  }
+
+  .left-container,
+  .left-form-container {
+    margin: 0; /* Adjust margin as needed */
+    
+  }
+  .left-form{
+    display: none;
+  }
+
+  /* Add mobile-specific styles and adjustments here */
+}

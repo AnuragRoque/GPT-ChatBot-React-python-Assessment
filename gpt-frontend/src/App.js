@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./App.css";  
 import Chatbot from "./Components/Chatbot";
 
 function App() {
@@ -19,7 +19,7 @@ function App() {
     <div className="app-container">
       <div className="left-container">
         <div className="about-chatbot">
-          <h1>CHAT BOT - MeetUniversity</h1>
+          <h1>Personalized Dynamic Chatbot</h1>
           <p>(powered by GPT-3.5 Turbo)</p>
           <i>
             Hint: Type anything in the textfield and hit the send button/enter.
@@ -27,7 +27,7 @@ function App() {
             Hit clear button to clear chats.
             <br />
             Click Here To{" "}
-            <a href="https://docs.google.com/document/d/1_UMI_fwUX_iwT4Dlp3Nuwmk1T_443X9NjiTaQjFJ36I/edit?usp=sharing">
+            <a href="https://docs.google.com/document/d/1eoVq-6oOpIMmheI0IgRy-Ty8FYTkKH1j/edit?usp=sharing&ouid=102388778311955000420&rtpof=true&sd=true">
               learn More
             </a>
           </i><br></br><br></br><br></br>
