@@ -3,7 +3,7 @@ import "./App.css";
 import Chatbot from "./Components/Chatbot";
 
 function App() {
-  const [isChatbotVisible, setIsChatbotVisible] = useState(false);
+  const [isChatbotVisible, setIsChatbotVisible] = useState(true);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
 
