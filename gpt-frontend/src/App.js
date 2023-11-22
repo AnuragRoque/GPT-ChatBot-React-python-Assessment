@@ -22,7 +22,7 @@ function App() {
           <h1>Personalized Dynamic Chatbot</h1>
           <p>(powered by GPT-3.5 Turbo)</p>
           <i>
-            Hint: Type anything in the textfield and hit the send button/enter.
+            Hint: Type anything in the textfield and hit the send button/enter. This is Just Frontend, Insert OpenAI API.
             <br />
             Hit clear button to clear chats.
             <br />
