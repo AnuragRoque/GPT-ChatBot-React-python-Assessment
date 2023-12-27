@@ -46,6 +46,7 @@ gpt-backend-env
 
 gpt-backend2/
 
+
 # Snowpack dependency directory (https://snowpack.dev/)
 web_modules/
 
