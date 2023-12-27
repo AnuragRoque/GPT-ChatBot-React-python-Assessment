@@ -3,7 +3,7 @@ import "./App.css";
 import Chatbot from "./Components/Chatbot";
 
 function App() {
-  const [isChatbotVisible, setIsChatbotVisible] = useState(true);
+  const [isChatbotVisible, setIsChatbotVisible] = useState(false);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
 
@@ -16,18 +16,14 @@ function App() {
   };
 
   return (
-    
     <div className="app-container">
-    <div class="not-supported-message">
-  <p>This view is not supported on mobile devices. Please enable desktop mode.</p>
-</div>
     
       <div className="left-container">
         <div className="about-chatbot">
           <h1>CHAT BOT - Roque Industries</h1>
           <p>(powered by GPT-3.5 Turbo)</p>
           <i>
-            Hint: Type anything in the textfield and hit the send button/enter. This is Just Frontend, Insert OpenAI API.
+            Hint: Type anything in the textfield and hit the send button/enter.
             <br />
             Hit clear button to clear chats.
             <br />

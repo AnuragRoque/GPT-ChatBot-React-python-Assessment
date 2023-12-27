@@ -8,8 +8,7 @@ const speechRecognition = window.SpeechRecognition || window.webkitSpeechRecogni
 
 // const API_BASE_URL = "http://localhost:5000";
 // const API_BASE_URL = "http://10.1.0.4:5000";
-const API_BASE_URL = "http://192.168.1.160:5000";
-// http://192.168.1.160:3000
+const API_BASE_URL = "http://192.168.31.152:5000";
 
 function speakResponse(responseText) {
   // SpeechSynthesisUtterance object
