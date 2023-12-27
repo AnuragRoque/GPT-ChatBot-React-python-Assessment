@@ -1,7 +1,7 @@
 # GPT-Dynamic-ChatBot-React-python
 
 ##### Live Demo (Website Chatbot): https://gpt-chatbot-react-python-assessment.pages.dev/
-##### Live Demo (Personal AI): https://gpt-chatbot-react-python-assessment.pages.dev/
+##### Live Demo (Personal AI): [https://gpt-chatbot-react-python-assessment.pages.dev/](https://anuragpi.me/home-server-web-ui1/main-ui/)
 
 <img src="https://github.com/AnuragRoque/GPT-ChatBot-React-python-Assessment/assets/41073466/6db84742-ec4f-44bf-9340-4054e0b99cec" alt="bot-thumbnail" width="600" height="400" />
 
