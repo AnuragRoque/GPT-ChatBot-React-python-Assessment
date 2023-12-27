@@ -16,11 +16,7 @@ function App() {
   };
 
   return (
-    
     <div className="app-container">
-    <div class="not-supported-message">
-  <p>This view is not supported on mobile devices. Please enable desktop mode.</p>
-</div>
     
       <div className="left-container">
         <div className="about-chatbot">

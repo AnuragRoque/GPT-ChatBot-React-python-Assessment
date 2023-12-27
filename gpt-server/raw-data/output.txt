@@ -111,3 +111,4 @@ Optimized system functionality using Python programming with Flask and framework
 Efficiently analyzed project, showcasing innovation, problem-solving, and leadership. My role was in Backend Development .Fostered cohesive team environment through delegation and coaching.
 Skills: Python, Flask, Django, PuTTY, web development, IOT, Raspberry pi, Sensors, Effective communication, Leadership, Mentoring.
 
+ss

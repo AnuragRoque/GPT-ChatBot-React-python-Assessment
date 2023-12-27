@@ -1,20 +1,23 @@
 import React, { useState, useEffect, useRef } from "react";
 import axios from "axios";
 
-import "./Chatbot.css"; 
+import "./Chatbot.css"; // Import the CSS for styling
 
 const speechSynthesis = window.speechSynthesis;
 const speechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
 
 // const API_BASE_URL = "http://localhost:5000";
 // const API_BASE_URL = "http://10.1.0.4:5000";
-const API_BASE_URL = "http://192.168.1.160:5000";
-// http://192.168.1.160:3000
+const API_BASE_URL = "http://192.168.31.152:5000";
 
 function speakResponse(responseText) {
-  // SpeechSynthesisUtterance object
+  // Create a SpeechSynthesisUtterance object
   const utterance = new SpeechSynthesisUtterance(responseText);
+
+  // Use the default voice
   utterance.voice = speechSynthesis.getVoices()[0];
+
+  // Start speaking
   speechSynthesis.speak(utterance);
 }
 
@@ -24,8 +27,10 @@ function Chatbot(props) {
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [isListening, setIsListening] = useState(false);
 
+  // Create a ref for the chat content element
   const chatContentRef = useRef(null);
 
+  // Create a ref for the last assistant message element
   const lastAssistantMessageRef = useRef(null);
 
   const recognition = new speechRecognition();
@@ -53,7 +58,7 @@ function Chatbot(props) {
     event.preventDefault();
     const sentMessage = { role: "user", content: userInput, hidden: false };
 
-    // sent text to the conversation immediately
+    // Add the sent text to the conversation immediately
     setConversation((prevConversation) => [...prevConversation, sentMessage]);
 
     // Clear the input field
@@ -89,8 +94,7 @@ function Chatbot(props) {
       }
     } else {
       setIsSpeaking(false);
-      // Stop speaking if needed (this depends on the TTS library/API you are using)
-      // For Web Speech API, you can use: speechSynthesis.cancel();
+      // Stop speaking if needed
     }
   };
 
@@ -109,15 +113,15 @@ function Chatbot(props) {
     const messages = document.querySelectorAll(".chat-bubble");
 
     messages.forEach((message, index) => {
-      // Use a timeout to stagger the animations
+   
       setTimeout(() => {
-        message.style.opacity = 1; // Set opacity to 1 to trigger the fade-in effect
+        message.style.opacity = 1; 
       }, index * 100); 
     });
   }, [conversation]);
 
   useEffect(() => {
-  
+    // Greet the user 
     setConversation([
       ...conversation,
       {
@@ -128,6 +132,8 @@ function Chatbot(props) {
     ]);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
+
+
 
   return (
     <div className="chat-container">
@@ -159,9 +165,11 @@ function Chatbot(props) {
               </div>
             )}
             {message.content}
+           
           </div>
-        ))}
-        {/* Add an empty div with a ref to scroll to the last assistant message */}
+          
+        ))} 
+        {/* empty div with a ref to scroll to the last assistant message */}
         <div ref={lastAssistantMessageRef}></div>
       </div>
       <div className="mic-on">
@@ -183,6 +191,7 @@ function Chatbot(props) {
             {isListening ? 'mic_off' : 'settings_voice'}
           </span>
         </button>
+      
       </div>
       <form onSubmit={handleSubmit} className="chat-input-container">
         <input
@@ -192,9 +201,7 @@ function Chatbot(props) {
           placeholder="Type a message..."
           className="chat-input"
         />
-        <button type="submit" className="send-button">
-          Send
-        </button>
+      
       </form>
     </div>
   );

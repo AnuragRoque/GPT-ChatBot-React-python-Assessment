@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./Homepage.css"; 
+import "./Homepage.css"; // Import your CSS for styling
 
 function Homepage() {
   const [showChatbot, setShowChatbot] = useState(false);

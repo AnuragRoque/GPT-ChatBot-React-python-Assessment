@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./App.css";
+import "./App.css";  
 import Chatbot from "./Components/Chatbot";
 
 function App() {
@@ -16,15 +16,10 @@ function App() {
   };
 
   return (
-    
     <div className="app-container">
-    <div class="not-supported-message">
-  <p>This view is not supported on mobile devices. Please enable desktop mode.</p>
-</div>
-    
       <div className="left-container">
         <div className="about-chatbot">
-          <h1>CHAT BOT - Roque Industries</h1>
+          <h1>Personalized Dynamic Chatbot</h1>
           <p>(powered by GPT-3.5 Turbo)</p>
           <i>
             Hint: Type anything in the textfield and hit the send button/enter.
@@ -32,15 +27,11 @@ function App() {
             Hit clear button to clear chats.
             <br />
             Click Here To{" "}
-            <a href="https://docs.google.com/document/d/1_UMI_fwUX_iwT4Dlp3Nuwmk1T_443X9NjiTaQjFJ36I/edit?usp=sharing">
+            <a href="https://docs.google.com/document/d/1eoVq-6oOpIMmheI0IgRy-Ty8FYTkKH1j/edit?usp=sharing&ouid=102388778311955000420&rtpof=true&sd=true">
               learn More
             </a>
           </i><br></br><br></br><br></br>
-          {isChatbotVisible ? (
-            <button onClick={handleCloseChatbot}>Close Chatbot</button>
-          ) : (
-            <button onClick={handleStartChatbot}>Open Chatbot</button>
-          )}
+          <button onClick={handleCloseChatbot}>Close Chatbot</button>
         </div>
       </div>
       <div className="left-form-container">
@@ -58,11 +49,13 @@ function App() {
             placeholder="Enter your Email"
             value={userEmail}
             onChange={(e) => setUserEmail(e.target.value)}
-          /><br></br><br></br>
+          /><br></br><br></br><br>
+            
+          </br>
           <button onClick={handleStartChatbot}>Start Chatbot</button>
         </div>
       </div>
-
+      
       {isChatbotVisible && (
         <div className="right-container">
           <Chatbot userName={userName} />

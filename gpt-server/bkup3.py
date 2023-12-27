@@ -67,7 +67,7 @@ for filename in os.listdir(pdf_directory):
         for page in reader.pages:
             text = page.extract_text()
             all_text += text
-with open('raw-data/pdf-output.txt', 'w', encoding='utf-8') as text_file:
+with open('pdf-output.txt', 'w', encoding='utf-8') as text_file:
     text_file.write(all_text)
 
 
@@ -76,20 +76,11 @@ app = Flask(__name__)
 CORS(app)  # CORS for all routes
 
 # Set your OpenAI API key
-# openai.api_key = os.getenv('OPENAI_API_KEY')
-# print("API Key:", api_key)
+openai.api_key = os.getenv('OPENAI_API_KEY')
 
-openai.api_key = "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"
 # Load the document and create Langchain components
-txt_directory = 'raw-data/'
-documents = []
-for filename in os.listdir(txt_directory):
-    if filename.endswith('.txt'):
-        txt_path = os.path.join(txt_directory, filename)
-        loader = UnstructuredFileLoader(txt_path)
-        document = loader.load()
-        documents.append(document)
 
+loader = UnstructuredFileLoader('raw-data/main-document.txt') #attach your document here that contains raw data
 documents = loader.load()
 
 text_splitter = CharacterTextSplitter(chunk_size=1000, chunk_overlap=0)
@@ -138,14 +129,6 @@ def ask():
     
     if user_input_lower == "exit":
         return jsonify({"assistant_response": speak("Goodbye!")})
-    
-    elif user_input_lower == "unlock":
-        return jsonify({"assistant_response": speak("Enter Secret Key!")})
-    # elif user_input_lower == os.getenv('SECRETDB_API_KEY'):
-    elif user_input_lower == "roque22":
-       return jsonify({"assistant_response": speak("Enter Secret Key!")})
-    
-        # return jsonify({"assistant_response": speak("Access Denied")})
     
     # Check if the user's input is in the question-answer pairs
     for pair in question_answer_pairs:
