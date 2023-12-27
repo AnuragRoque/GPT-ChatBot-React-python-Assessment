@@ -3,7 +3,7 @@ import "./App.css";
 import Chatbot from "./Components/Chatbot";
 
 function App() {
-  const [isChatbotVisible, setIsChatbotVisible] = useState(false);
+  const [isChatbotVisible, setIsChatbotVisible] = useState(true);
   const [userName, setUserName] = useState("");
   const [userEmail, setUserEmail] = useState("");
 
@@ -27,7 +27,7 @@ function App() {
           <h1>CHAT BOT - Roque Industries</h1>
           <p>(powered by GPT-3.5 Turbo)</p>
           <i>
-            Hint: Type anything in the textfield and hit the send button/enter.
+            Hint: Type anything in the textfield and hit the send button/enter. This is Just Frontend, Insert OpenAI API.
             <br />
             Hit clear button to clear chats.
             <br />
